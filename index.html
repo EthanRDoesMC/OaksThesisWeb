@@ -6,23 +6,38 @@
   <!--i'm gonna be 100% honest this was made with some gpt assistance, webdev was never my thing-->
   <style>
     body {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
       background-color: #ffffff;
       color: #000000;
-      text-align: center;
+      margin: 0;
       padding: 2rem;
       box-sizing: border-box;
       transition: background-color 0.3s, color 0.3s;
     }
 
-    .content {
-      width: /*66.66%;*/ 80%;
-      /*max-width: 900px;*/
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    .image {
+      flex: 1 1 300px;
       text-align: center;
+    }
+
+    .image img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .text {
+      flex: 2 1 400px;
     }
 
     h1 {
@@ -36,10 +51,9 @@
       margin: 0.2em 0;
       color: #666666;
     }
-    
-    img {
-      max-width: 50%;
-      max-height: 50%;
+
+    h3 {
+      margin-top: 1.5em;
     }
 
     @media (prefers-color-scheme: dark) {
@@ -54,8 +68,9 @@
     }
 
     @media (max-width: 600px) {
-      .content {
-        width: 90%;
+      .container {
+        flex-direction: column;
+        text-align: center;
       }
 
       h1 {
@@ -76,13 +91,17 @@
   <meta name="og:description" property="og:description" content="Oak's Thesis is a Pokédex app built with love for iOS.">
 </head>
 <body>
-  <div class="content">
-    <h1>Oak’s Thesis</h1>
-    <h2>A Pokédex for the discerning user<br />(people who like nice apps)</h2>
-    <img src="main_product_image.png"/>
-    <h2>Coming soon</h2>
-    <h3>Created by Ethan Chaffin</h3>
-    <p>(It's called "Oak's Thesis" because, as the Pokémon Professor, Oak has been studying Pokémon for his entire academic career, with the Pokédex as his life's work. Therefore, it was probably his dissertation... thus the name!)</p>
+  <div class="container">
+    <div class="image">
+      <img src="main_product_image.png" alt="The Kanto dex.">
+    </div>
+    <div class="text">
+      <h1>Oak’s Thesis</h1>
+      <h2>A Pokédex for the discerning user<br />(people who like nice apps)</h2>
+      <h2>Coming soon</h2>
+      <h3>Created by Ethan Chaffin</h3>
+      <p>(It's called "Oak's Thesis" because, as the Pokémon Professor, Oak has been studying Pokémon for his entire academic career, with the Pokédex as his life's work. Therefore, it was probably his dissertation... thus the name!)</p>
+    </div>
   </div>
 </body>
 </html>
